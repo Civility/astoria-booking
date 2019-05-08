@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="template" client="site">
+	<name>collector</name>
+	<version>3.9</version>
+	<creationDate>01.04.2019</creationDate>
+	<author>Oleg Orlov</author>
+    <authorEmail>civilitys@gmail.com</authorEmail>
+    <copyright>© Oleg Orlov 2019, LLC. All rights reserved.</copyright>
+	<description>TEMP_DESCRIPTION</description>
+	<files>
+		<filename>.gitignore</filename>
+		<filename>favicon.ico</filename>
+		<filename>gulpfile.js</filename>
+		<filename>index.php</filename>
+		<filename>offline.php</filename>
+		<filename>package.json</filename>
+		<filename>README.md</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>gulp</folder>
+		<folder>html</folder>
+		<folder>libs</folder>
+	</files>
+	<positions>
+		<position>menu</position>
+		<position>banner</position>
+		<position>panel</position>
+		<position>events</position>
+		<position>scrap</position>
+		<position>main</position>
+		<position>item</position>
+		<position>footer</position>
+		<position>toptop</position>
+		<position>debug</position>
+	</positions>
+	<languages folder="language">
+		<language tag="ru-RU">ru-RU/ru-RU.tpl_collector.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.tpl_collector.sys.ini</language>
+	</languages>
+</extension>

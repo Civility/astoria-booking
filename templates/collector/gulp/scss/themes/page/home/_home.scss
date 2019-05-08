@@ -1,0 +1,109 @@
+/* home */
+.front {
+    @import "slider";
+    @import "reservation";
+    .flash {
+        @extend .container;
+
+        .card {
+            @extend .overflow-hidden;
+            @extend .h-100;
+            @extend .border-0;
+            @extend .rounded-0;
+            @extend .shadow;
+
+            .flash-image {
+                @extend .float-none; 
+                @extend .card-img-top;
+            }
+            
+            .item-image {
+                a {
+                    @extend .stretched-link;
+                }            
+                @extend .position-relative;
+                @include transition($transition-base);
+                &:before {
+                    content: '';
+                    @extend .position-absolute;
+                    @extend .bg-line-img;
+                    @extend .w-100;
+                    @extend .h-100;
+                    top: 0;
+                    left: 0;
+                }
+                &:after {
+                    display: block;
+                    content: '';
+                    @extend .position-absolute;
+                    top: $spacer;
+                    right: $spacer;
+                    bottom: $spacer;
+                    left: $spacer;
+                    @extend .border;
+                }
+            }
+            .card-body {
+                transform: translateX(-100%);
+                @extend .card-img-overlay;
+                @extend .bg-05;
+                @extend .card-trans;
+                @extend .d-flex;
+                @extend .justify-content-center;
+                @extend .align-items-center;
+            }
+
+            .card-text {
+                @extend .text-light;
+                @extend .d-flex;
+                @extend .align-items-center;
+                line-height: $line-height-sm;
+                overflow: hidden;
+                @extend .px-1;       
+                @extend .position-relative;
+                bottom: $spacer + 1.5;
+                & > * {
+                    @extend .mb-0;
+                }
+            }
+
+            .page-header {
+                @extend .h5;
+                @extend .mb-0;
+                @extend .py-3;
+                @extend .font-weight-bold;
+                @extend .text-uppercase;
+                a {
+                    @extend .text-body;        
+                }     
+            }
+            
+            .card-footer {
+                @include transition($transition-base);
+                @extend .h-100;
+                z-index: $zindex-dropdown;
+                @extend .text-center;
+                @extend .border-0;
+            }
+
+            &:hover, &:focus {
+                @include transition($transition-base);
+                .card-img-top {
+                    img, &::before {
+                        transform: scale(1.2);
+                        @include transition($transition-base);
+                    }
+                }            
+                .card-body {
+                    transform: translateX(0px);
+                }
+                .page-header { 
+                    a {
+                        @extend .text-light;
+                        @include transition($transition-base);
+                    }             
+                }
+            }
+        }
+    }
+}

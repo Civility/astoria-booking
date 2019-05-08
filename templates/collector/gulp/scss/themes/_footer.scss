@@ -1,0 +1,23 @@
+/* footer */
+.footer {
+   background-color: $light;
+    .site-info {
+        @extend .d-flex;
+        @extend .flex-column;
+        text-align: left;
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+    }
+    .row > * {
+        @extend .my-3;
+    }
+    .pays {
+        @extend .d-flex;
+        @extend .justify-content-between;
+        @extend .align-items-center;
+        img {
+            @extend .w-25;
+        }
+    }
+}

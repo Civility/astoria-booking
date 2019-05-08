@@ -1,0 +1,78 @@
+.chess {
+    @extend .shadow;
+    .img {
+        @extend .col-lg-8;
+        @extend .col-12;
+        @extend .mb-0;
+        @extend .px-0;
+        @extend .position-relative;
+        @extend .bg-absolute-before;
+        @extend .shadow;
+        &::before {
+            @extend .bg-line-img;
+        }
+        img {
+            @extend .w-100;
+        }
+    }
+    .media {
+        @extend .position-relative;
+        @extend .align-items-center;
+        @extend .d-flex;
+        @extend .flex-wrap;
+        @extend .py-lg-5;
+        @extend .mb-5;
+        @extend .mb-lg-0;
+        &:nth-child(odd) {
+            @extend .align-items-center;
+            @extend .bg-dark;
+            &::before {
+                left: 0;
+                bottom: 0;
+                right: 0;
+                top: 0;
+                @extend .w-100;
+                @extend .h-100;
+            }
+            .img {
+                @include media-breakpoint-up(lg) {
+                    margin-left: -$spacer * 3;
+                    margin-right: $spacer * 3;
+                }
+            }
+            .media-body {
+                @extend .text-white;
+            }
+        }
+        &:nth-child(even) {
+            @extend .bg-light;
+            .img {
+                @extend .order-0;
+                @extend .order-lg-1;
+                @include media-breakpoint-up(lg) {
+                    margin-left: $spacer * 3;
+                    margin-right: -$spacer * 3;;
+                } 
+            }
+            @include media-breakpoint-up(lg) {
+                .media-body {
+                    padding-left: $spacer * 3!important;
+                    padding-right: 0!important;
+                }
+            }
+        }
+    }
+
+    .media-body {
+        @extend .position-relative;
+        @extend .col-lg-4;
+        @extend .col-12;
+        @extend .pr-3;
+        @extend .pr-lg-5;
+        @extend .py-3;
+        @extend .py-lg-0;
+    }
+    .title {
+        @extend .card-title;
+    }
+}

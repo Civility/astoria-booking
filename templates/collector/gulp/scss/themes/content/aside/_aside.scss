@@ -1,0 +1,7 @@
+/* aside */
+.aside {
+    z-index: $zindex-dropdown;
+    .container {
+        @extend .separator;
+    }
+}

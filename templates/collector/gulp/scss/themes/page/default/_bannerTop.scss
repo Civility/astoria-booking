@@ -1,0 +1,43 @@
+&:not(.location) {
+    .fond {
+        &::before {
+            @extend .rep-grad;
+            @extend .before-content;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        &::after {
+            @extend .bg-line-grad;
+            @extend .before-content;
+        }
+    }
+}
+
+.panel {
+    .fond {
+        @extend .position-relative;
+        @extend .text-center;
+    }
+
+    .page-header {
+       z-index: $zindex-dropdown;
+       @extend .position-relative;
+       bottom: 10vh;
+    }
+
+    @for $i from 1 through 15 {
+        @each $id in #{$i} {
+            .article-#{$id} {
+                background-image: url('./../images/banner/#{$id}.jpg');
+            }
+            .category-#{$id} {
+                background-image: url('./../images/rooms/#{$id}.jpg');
+            }
+        }
+    }
+  
+    .jumbotron {
+        @extend .img-bg;
+        height: 80vh;
+    }
+}

@@ -1,0 +1,50 @@
+.items {
+    justify-content: space-between;
+    .item {
+        &:not(:last-child) {
+            @extend .mb-sm-4;
+            @extend .mb-md-auto;
+        }
+        .card {
+            @include hover-focus {
+                .short {
+                    li {
+                        &:last-child {
+                            display: block;
+                        }
+                        &:first-child {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .short {
+        @extend .list-unstyled;
+        @extend .position-absolute;
+        right: 0;
+        @extend .text-white;
+        @extend .text-center;
+        @extend .mb-0;
+
+        li {
+            width: $spacer * 7;
+            @extend .p-2;
+            @extend .bg-danger;
+            @extend .shadow;
+
+            &:last-child {
+                display: none;
+            }
+        }
+
+        i {
+            @extend .fa-lg;
+            @extend .fal;
+            @extend .mr-3;
+        }
+
+    }
+}

@@ -1,0 +1,63 @@
+//form
+.form {
+    h2 {
+        @extend .h3;
+        @extend .border-title;
+        @extend .text-white;
+    }
+    padding-right: $spacer * 3;
+    padding-left: $spacer * 3;
+    padding-bottom: $spacer * 3;
+
+    h3 {
+        @extend .text-white;
+    }
+
+    .control-label {
+        @extend .text-white;
+    }
+
+    @each $class, $fal in (date-in, '\f271'),
+    (date-out, '\f272'),
+    (category-room, '\f005'),
+    (grown, '\f007'),
+    (name, '\f2bd'),
+    (children, '\f1ae'),
+    (email, '\f0e0'),
+    (phone, '\f095'),
+    (message, '\f27a'),
+     {
+        .rsform-block-#{$class} {
+            label {
+                &:before {
+                    content: "#{$fal}";
+                }
+            }
+        }
+    }
+
+    .formControls {
+        @extend .text-center;
+    }
+
+    .formContainer {
+        .form-row {
+            .col-6 {
+                @extend .col-12;
+                @extend .col-lg-6;
+            }
+            .col-12 {
+                @extend .col-12;
+            }
+        }
+        label {
+            @extend .icon-fas;
+        }
+    }
+    .rsform-block-captcha {
+        @extend .position-absolute;
+    }
+}
+.events {
+    @extend .form;
+}

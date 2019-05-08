@@ -1,0 +1,163 @@
+/* header */
+.logo {
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .align-items-center;
+    @extend .justify-content-center;
+    @extend .text-decoration-none;
+    img {
+        width: 4rem;
+    }
+}
+.navbar-text {
+    @extend .text-body;
+    @extend .font-weight-bold;
+    @extend .text-uppercase;
+    @include font-size($font-size-sm);
+    @extend .text-center;
+    @extend .text-break;
+    @extend .text-nowrap;    
+    @extend .mb-0;
+    letter-spacing: .15rem;
+    @extend .text-shadow;
+    &:after {
+        content: "\2605\2605\2605\2605\2605";
+        @extend .font-weight-bold;
+        @include font-size($font-size-lg);
+        @extend .text-primary;
+        display: inherit;
+        letter-spacing: .25rem;
+    }
+}
+
+.address {
+    @extend .justify-content-center;
+    @include media-breakpoint-down(md) {
+        text-align: center;
+    }
+    &, p {
+        margin-bottom: 0;
+        @include media-breakpoint-down(md) {
+            margin-bottom: .5rem;
+        }
+    }
+    .phone {
+        a {
+            @extend .h5;
+            letter-spacing: 0.2rem;
+            @extend .text-nowrap;
+        }
+    }
+    .mail {
+        @extend .text-nowrap;
+    }
+
+    a {
+        @extend .text-decoration-none;
+    }
+}
+
+.nav-top {
+    @extend .bg-light;
+    .navbar {
+        @extend .px-0;
+    }
+}
+
+.nav-bottom {
+    @extend .position-absolute;
+    
+    width: 100%;
+    z-index: $zindex-fixed;
+    background-color: rgba($black, .7);
+    @extend .bg-05;
+    @extend .navbar-dark;
+
+    // .navbar-collapse {
+    //     @extend .justify-content-center;
+    // }
+
+    .menu {
+        @extend .w-100;
+        @extend .justify-content-center;
+
+        @include media-breakpoint-down(md) {    
+            @each $class, $fal in
+            (142, '\f594'),
+            (143, '\f163'),
+            (144, '\f084'),
+            (145, '\f2e7'),
+            (146, '\f3c5')
+             {
+                .item-#{$class} {
+                    color: $light;
+                    &::before {
+                        content: "#{$fal}";
+                    }
+                    &.active {
+                        color: $dark; 
+                    }       
+                }
+            }
+        }
+
+        .nav-item {
+            
+            // @extend .my-1;
+            // @extend .mx-3;
+            margin: .25rem 1rem;
+            // @extend .fal;
+            @include media-breakpoint-down(md) {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+            }
+            &::before {
+                padding-left: 1rem;
+            }
+        }
+
+        .nav-link {
+            font-family: ProximaNovaBold, sans-serif;
+            // @extend .first-upper;
+            @extend .text-nowrap;
+            @extend .text-uppercase;           
+            @extend .btn-block;
+            @extend .py-3;
+            @extend .px-3;
+            @extend .rounded-0;
+            @extend .font-weight-bold;
+            border: 2px solid transparent;
+            @include transition($btn-transition);
+            @include hover-focus {
+                border: 2px solid $light;
+                height: 100%;
+            }
+        }
+
+        .active {
+
+            .nav-link {
+                border: 2px solid transparent;
+                @extend .shadow;
+            }
+            
+            @extend .btn-outline-light;
+            a {
+                @extend .text-dark;
+            }  
+            @include hover-focus {
+                a {
+                   @extend .text-muted; 
+                }
+            }                     
+        }
+    }
+
+    .navbar-toggler {
+        @extend .btn-block;
+        @extend .my-1;
+    }
+
+}

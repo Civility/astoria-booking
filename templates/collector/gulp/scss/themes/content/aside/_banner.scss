@@ -1,0 +1,20 @@
+/* banner */
+
+.banner {
+    @extend .mb-3;
+    @extend .shadow;
+    @extend .w-100;
+    &.card{
+        @extend .border-white;
+    }
+
+    .card-title {
+        @extend .mb-3;
+        @extend .py-3;
+        @extend .text-body;
+        @extend .text-uppercase;
+        @extend .border;
+        // @extend .rounded-lg;
+        @extend .border-primary;
+    }
+}

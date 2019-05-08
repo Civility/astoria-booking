@@ -1,0 +1,8 @@
+.site {
+    @import 'bannerTop';
+    @import 'reservation';
+    .main {
+        @extend .pb-lg-5;
+        @extend .pb-3;
+    }
+}

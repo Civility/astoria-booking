@@ -1,0 +1,34 @@
+/* show */
+.panel {
+    display: block;
+    p {
+        @extend .container;
+    }
+
+    #panel{
+        @for $i from 1 through 6 {
+            @each $id in #{$i}{
+                .slider-#{$id} {
+                    background-image: url('./../images/slider/#{$id}.jpg');
+                }
+            }
+        }
+    }
+    
+    .slider {
+        .jumbotron {
+            @extend .rounded-0;
+            @extend .img-bg;
+            height: 100vh;
+            & > * {
+                @extend .container;
+                @extend .text-center;
+                @extend .position-relative;
+                bottom: 10vh;
+            }
+            &::before {
+                @extend .bg-line-grad;
+            }
+        }
+    }
+}

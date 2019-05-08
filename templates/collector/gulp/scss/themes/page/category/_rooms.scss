@@ -1,0 +1,88 @@
+.rooms {
+    // @extend .w-100;
+
+
+    .aside {
+        margin-top: 10rem;
+    }
+    .rooms-page {
+        @extend .container;
+
+    .item {
+        @extend .mb-4;
+        @extend .mb-lg-4;
+    }
+
+    .card {
+        @extend .overflow-hidden;
+        @extend .card-trans;
+        @extend .bg-dark;
+        @extend .border-0;
+        @extend .shadow;
+
+        &::after {
+            @extend .before-content;
+        }
+
+        .item-image {
+            @extend .card-trans;
+            opacity: 0.8;
+        }
+
+        .card-body {
+            @extend .position-absolute;
+            bottom: 0;
+            left: 0;
+            @extend .w-100;
+            transform: translateY(100%);
+            @extend .p-0;
+
+            .card-title,
+            .card-text {
+                @extend .m-0;
+                @extend .w-100;
+                padding: $spacer / 2;
+            }
+
+            .page-header {
+                @extend .position-absolute;
+                bottom: 100%;
+                @extend .d-inline-block;
+                @extend .text-uppercase;
+                @extend .text-shadow;
+
+                a {
+                    @extend .text-white;
+                }
+            }
+
+            .card-text {
+                @extend .text-white;
+                @extend .small;
+                background-color: rgba($black, .7);
+                display: none;
+                @extend .py-3;
+                @include media-breakpoint-up(xl) {display: block;}
+                p {
+                    @extend .mb-0;
+                    @extend .font-weight-bold;
+                }
+
+            }
+        }
+
+        @include hover-focus {
+
+            .card-body {
+                transform: translateY(0);
+                @extend .card-trans;
+            }
+
+            .item-image {
+                opacity: 0.5;
+                transform: scale(1.1);
+            }
+        }
+    }
+    }
+}

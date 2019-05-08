@@ -1,0 +1,71 @@
+/* reservation */
+.reservation {
+    .card-img {
+        filter: blur(3px);
+        max-height: 50vh;
+        overflow: hidden;
+        @extend .d-flex;
+        @extend .justify-content-center;
+        @extend .align-items-center;
+    }
+    .card {
+        @extend .border-0;
+        @extend .rounded-0;
+    }
+    .card-img-overlay {
+        @extend .d-flex;
+        @extend .justify-content-center;
+        @extend .align-items-center;
+        @include media-breakpoint-down(md) {
+            padding: 0;
+        }
+        .card {
+           @extend .py-3;
+           @extend .w-100;
+        //    @extend .border-0;
+        //    @extend .border;
+           background-color: rgba($white, 0.5);
+           @include media-breakpoint-down(md) {
+               margin: auto;
+           }
+           .card-text {
+                margin-right: $spacer * 3;
+                margin-left: $spacer * 3;
+                @extend .my-0;
+                @extend .text-shadow;
+                @extend .text-body;
+                @extend .h5;
+                @extend .font-weight-bold;
+                @include media-breakpoint-down(md) {
+                    margin-right: $spacer / 2;
+                    margin-left: $spacer / 2;
+                }
+               p {
+                   @extend .my-0;
+                   @extend .position-relative;
+                   a {
+                       @extend .text-nowrap; 
+                   }
+               }
+               &:before {
+                    @extend .d-block;
+                    content: '';
+                    top: 0.5rem;
+                    right: -2rem;
+                    bottom: 0rem;
+                    left: 2rem;
+                    border: 3px solid $primary;
+                    @extend .position-absolute;
+                    padding: 2rem;
+                    @include media-breakpoint-down(md) {
+                        right: 0;
+                        left: 0;
+                        top: 0;
+                        bottom: 0;
+                    }
+               }
+           }
+        }            
+    }
+}
+

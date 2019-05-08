@@ -1,0 +1,42 @@
+/* reservation */
+.reservation {
+    @extend .position-relative;
+    @extend .w-100;
+    @extend .mb-0;
+    @extend .py-lg-5;
+    @extend .py-3;
+    &:before {
+        content: '';
+        background-image: url("../images/home_event.jpg");
+        box-sizing: border-box;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        filter: blur(3px);
+        @extend .bg-absolute;
+        height: 100vh;
+        @extend .w-100; 
+    }
+    .container {
+        @extend .decor-white;
+        @extend .my-5;
+    }
+    .events {
+        @extend .decor-black;
+        .border-title {
+            @extend .position-relative;
+        }
+    }
+    .scrap {
+        @extend .px-5;
+        @extend .pb-3;
+        .custom {
+            & > * {
+                @extend .lead;
+                @extend .font-weight-bold;
+                @extend .text-body;
+            }
+        }
+    }
+}
