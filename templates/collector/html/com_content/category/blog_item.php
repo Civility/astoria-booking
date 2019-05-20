@@ -47,18 +47,16 @@ $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associat
 
 <?php echo JLayoutHelper::render('joomla.content.picture_image', $this->item); ?>
 <?php if (!empty($fieldVal['square']) && isset($fieldVal['square']) || !empty($fieldVal['bed']) && isset($fieldVal['bed'])) : ?>
-	<ul class="short">
+	<div class="short">
 		<?php if (!empty($fieldVal['square']) && isset($fieldVal['square'])) : ?>
-		<li>
 			<i class="fa-<?=$fieldClass['square']; ?>"></i><?=$fieldVal['square']; ?>м<sup>2</sup>
-		</li>
 		<?php endif; ?>	
-		<?php if (!empty($fieldVal['bed']) && isset($fieldVal['bed'])) : ?>
+		<?php /*if (!empty($fieldVal['bed']) && isset($fieldVal['bed'])) : ?>
 		<li>
 			<i class="fa-<?=$fieldClass['bed']; ?>"></i><?=$fieldVal['bed']; ?>
 		</li>
-		<?php endif; ?>
-		</ul>
+		<?php endif; */ ?>
+	</div>
 	<?php endif; ?>					
 <div class="card-body" itemprop = "description">
 	<?php if (!$params->get('show_intro')) : ?>

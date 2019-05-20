@@ -33,7 +33,7 @@
                     left: 0;
                 }
                 &:after {
-                    display: block;
+                    @extend .d-block;
                     content: '';
                     @extend .position-absolute;
                     top: $spacer;
@@ -44,7 +44,7 @@
                 }
             }
             .card-body {
-                transform: translateX(-100%);
+                transform: translateX(-101%);
                 @extend .card-img-overlay;
                 @extend .bg-05;
                 @extend .card-trans;

@@ -1,4 +1,19 @@
 /* header */
+
+/*sticky header position*/
+
+#header {
+    transition: all 0.25s ease-in;
+}
+
+.stuck #header {
+    // background-color: #222 !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    @extend .position-fixed;
+    top:0;
+}
+
 .logo {
     @extend .d-flex;
     @extend .flex-column;
@@ -69,13 +84,9 @@
     
     width: 100%;
     z-index: $zindex-fixed;
-    background-color: rgba($black, .7);
+    background-color: rgba($black, .6);
     @extend .bg-05;
     @extend .navbar-dark;
-
-    // .navbar-collapse {
-    //     @extend .justify-content-center;
-    // }
 
     .menu {
         @extend .w-100;

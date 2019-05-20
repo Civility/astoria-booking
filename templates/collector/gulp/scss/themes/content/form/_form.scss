@@ -15,6 +15,12 @@
 
     .control-label {
         @extend .text-white;
+        @extend .text-shadow;
+    }
+
+    .btn-secondary {
+        @extend .bg-primary;
+        border-color: $primary; 
     }
 
     @each $class, $fal in (date-in, '\f271'),

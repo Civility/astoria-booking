@@ -25,7 +25,8 @@
         @extend .mb-lg-0;
         &:nth-child(odd) {
             @extend .align-items-center;
-            @extend .bg-dark;
+            @extend .bg-07;
+            @extend .text-shadow;
             &::before {
                 left: 0;
                 bottom: 0;

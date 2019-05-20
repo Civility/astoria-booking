@@ -5,16 +5,13 @@
     @extend .shadow;
     @extend .w-100;
     &.card{
-        @extend .border-white;
+        @extend .border-0;
     }
 
     .card-title {
-        @extend .mb-3;
-        @extend .py-3;
         @extend .text-body;
         @extend .text-uppercase;
-        @extend .border;
-        // @extend .rounded-lg;
-        @extend .border-primary;
+        letter-spacing: 2px; 
+        @extend .title;  
     }
 }

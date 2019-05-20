@@ -22,8 +22,6 @@
         .card {
            @extend .py-3;
            @extend .w-100;
-        //    @extend .border-0;
-        //    @extend .border;
            background-color: rgba($white, 0.5);
            @include media-breakpoint-down(md) {
                margin: auto;

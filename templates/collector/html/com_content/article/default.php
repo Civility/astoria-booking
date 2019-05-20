@@ -143,8 +143,12 @@ JHtml::_('behavior.caption');
 						</picture>							
 					</figure>
 					<div class="media-body">
+					<?php if (!empty($fvalues['title'])): ?>
 						<h2 class="title"><?=$fvalues['title']; ?></h2>
+					<?php endif; ?>
+					<?php if (!empty($fvalues['text'])): ?>
 						<div class="text"><?=$fvalues['text']; ?></div>
+					<?php endif; ?>
 					</div>
 				</div>
 			<?php endif; ?>

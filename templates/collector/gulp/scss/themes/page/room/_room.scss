@@ -12,7 +12,7 @@
     
     .room-item {
         h2, h3, h4 {
-           @extend .border-title; 
+           @extend .title; 
            @extend .mt-0;
            @extend .px-3;
         }
@@ -23,7 +23,8 @@
         
         .block {
             &:nth-child(odd) {
-                @extend .bg-dark;
+                @extend .bg-07;
+                @extend .text-shadow;
                 @extend .text-white;
                 @extend .separator;
                 @extend .container;
